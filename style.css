@@ -1,0 +1,317 @@
+/**
+* CSS written by Michael Carr
+* https: //github.com/xyeres
+***/
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 2rem;
+  margin-bottom: 6rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #1d1e35;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 51px;
+  padding-bottom: 0px;
+  border-bottom: solid 1px #e7e7e9;
+}
+
+details[open] {
+  padding-bottom: 16px;
+  border-bottom: solid 1px #e7e7e9;
+}
+
+details[open] summary {
+  border-bottom: none;
+  font-weight: bold;
+}
+
+details[open] summary:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+summary:after {
+  content: url("images/icon-arrow-down.svg");
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+}
+
+summary::marker {
+  content: '';
+}
+
+@-webkit-keyframes hero-mobile-animation {
+  from {
+    -webkit-filter: drop-shadow(0px 32px rgba(240, 240, 252, 0.8));
+            filter: drop-shadow(0px 32px rgba(240, 240, 252, 0.8));
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0px 12px rgba(240, 240, 252, 0.8));
+            filter: drop-shadow(0px 12px rgba(240, 240, 252, 0.8));
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    -webkit-filter: drop-shadow(0px 32px rgba(240, 240, 252, 0.8));
+            filter: drop-shadow(0px 32px rgba(240, 240, 252, 0.8));
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes hero-mobile-animation {
+  from {
+    -webkit-filter: drop-shadow(0px 32px rgba(240, 240, 252, 0.8));
+            filter: drop-shadow(0px 32px rgba(240, 240, 252, 0.8));
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0px 12px rgba(240, 240, 252, 0.8));
+            filter: drop-shadow(0px 12px rgba(240, 240, 252, 0.8));
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    -webkit-filter: drop-shadow(0px 32px rgba(240, 240, 252, 0.8));
+            filter: drop-shadow(0px 32px rgba(240, 240, 252, 0.8));
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes hero-desktop-animation {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes hero-desktop-animation {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes hero-box-desktop-animation {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes hero-box-desktop-animation {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(9px);
+            transform: translateY(9px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.container {
+  position: relative;
+  margin: 14em auto;
+  padding: 1.65rem;
+  padding-top: 80px;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 327px;
+  -webkit-box-shadow: 0px 22px 30px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 22px 30px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-desktop {
+  display: none;
+}
+
+.hero-box-desktop {
+  display: none;
+}
+
+.hero-mobile {
+  height: 100%;
+  background: transparent;
+  width: 100%;
+  max-width: 266px;
+  max-height: 196px;
+  position: absolute;
+  top: -109px;
+  left: 15px;
+  -webkit-transition: 350ms all ease-in;
+  transition: 350ms all ease-in;
+  -webkit-animation-name: hero-mobile-animation;
+          animation-name: hero-mobile-animation;
+  -webkit-animation-iteration-count: 10;
+          animation-iteration-count: 10;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: #4a4b5e;
+}
+
+@media (min-width: 720px) {
+  summary:hover {
+    color: #f47c57;
+  }
+  .container {
+    margin-top: 7rem;
+    padding-top: 1.35rem;
+    max-width: 920px;
+    min-height: 508px;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-position-x: -635px;
+    background-position-y: -320px;
+  }
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .faq {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 50%;
+    padding-right: 6.25rem;
+  }
+  .title {
+    text-align: left;
+  }
+  .hero-mobile {
+    display: none;
+  }
+  .hero-desktop {
+    display: block;
+    position: absolute;
+    max-height: 359px;
+    max-width: 431px;
+    left: -96px;
+    top: 60px;
+    -webkit-clip-path: inset(0 0 0 22.2%);
+            clip-path: inset(0 0 0 22.2%);
+    -webkit-animation-name: hero-desktop-animation;
+            animation-name: hero-desktop-animation;
+    -webkit-animation-iteration-count: 10;
+            animation-iteration-count: 10;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+  .hero-box-desktop {
+    display: block;
+    position: absolute;
+    left: -93px;
+    top: 210px;
+    z-index: 2;
+    -webkit-animation-name: hero-box-desktop-animation;
+            animation-name: hero-box-desktop-animation;
+    -webkit-animation-iteration-count: 10;
+            animation-iteration-count: 10;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 795px) {
+  .hero-desktop {
+    left: -136px;
+    -webkit-clip-path: inset(0 0 0 31.55%);
+            clip-path: inset(0 0 0 31.55%);
+  }
+  .hero-box-desktop {
+    left: -93px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

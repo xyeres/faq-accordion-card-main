@@ -1,0 +1,287 @@
+/**
+* CSS written by Michael Carr
+* https: //github.com/xyeres
+***/
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+// Colors
+$heading-color:white;
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+$light-grayish-blue-divider: hsl(240, 5%, 91%);
+$soft-red: hsl(14, 88%, 65%);
+
+// Font Fams
+$font-family: 'Kumbh Sans',
+sans-serif;
+
+// Font Sizes
+$body-copy-font-size: 0.75rem;
+
+// Images
+$summary-arrow: 'images/icon-arrow-down.svg';
+$woman-mobile: 'images/illustration-woman-online-mobile.svg';
+$woman-desktop: 'images/illustration-woman-online-desktop.svg';
+$bg-pattern-mobile: 'images/bg-pattern-mobile.svg';
+$bg-pattern-desktop: 'images/bg-pattern-desktop.svg';
+
+// Mixins
+@mixin divider($padding: 0px) {
+  padding-bottom: $padding;
+  border-bottom: solid 1px $light-grayish-blue-divider;
+}
+
+@mixin shadow($throw: 32px) {
+  filter: drop-shadow(0px $throw rgba(240, 240, 252, .8))
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-large-phone-up {
+  @media (max-width: 795px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 720px) {
+    @content;
+  }
+}
+
+// Resets
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+// Tags
+body {
+  margin: 2rem;
+  margin-bottom: 6rem;
+  // padding: 2em;
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: $very-dark-desaturated-blue;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: $body-copy-font-size;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 51px;
+  @include divider;
+}
+
+details[open] {
+  summary {
+    border-bottom: none;
+    font-weight: bold;
+  }
+
+  summary:after {
+    transform: rotate(180deg);
+  }
+
+  @include divider(16px);
+}
+
+summary:after {
+  content: url($summary-arrow);
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+}
+
+summary::marker {
+  content: '';
+}
+
+// Keyframe animations
+@keyframes hero-mobile-animation {
+  from {
+    @include shadow;
+    transform: translateY(0px);
+  }
+
+  50% {
+    @include shadow(12px);
+    transform: translateY(10px);
+  }
+
+  to {
+    @include shadow;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hero-desktop-animation {
+  from {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hero-box-desktop-animation {
+  from {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(9px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+// Classes
+.container {
+  position: relative;
+  margin: 14em auto;
+  padding: 1.65rem;
+  padding-top: 80px;
+  background-color: white;
+  border-radius: 20px;
+  max-width: 327px;
+  box-shadow: 0px 22px 30px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+// Hero classes
+.hero-desktop {
+  display: none;
+}
+
+.hero-box-desktop {
+  display: none;
+}
+
+.hero-mobile {
+  height: 100%;
+  background: transparent;
+  width: 100%;
+  max-width: 266px;
+  max-height: 196px;
+  position: absolute;
+  top: -109px;
+  left: 15px;
+  transition: 350ms all ease-in;
+  animation-name: hero-mobile-animation;
+  animation-iteration-count: 10;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: $very-dark-grayish-blue;
+}
+
+// Desktop Overrides
+@include for-tablet-portrait-up {
+  summary:hover {
+    color: $soft-red;
+  }
+
+  .container {
+    margin-top: 7rem;
+    padding-top: 1.35rem;
+    max-width: 920px;
+    min-height: 508px;
+    background-image: url($bg-pattern-desktop);
+    background-repeat: no-repeat;
+    background-position-x: -635px;
+    background-position-y: -320px;
+  }
+
+  .row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+  }
+
+  .faq {
+    align-self: flex-start;
+    width: 50%;
+    padding-right: 6.25rem;
+  }
+
+  .title {
+    text-align: left;
+  }
+
+  .hero-mobile {
+    display: none;
+  }
+
+  .hero-desktop {
+    display: block;
+    position: absolute;
+    max-height: 359px;
+    max-width: 431px;
+    left: -96px;
+    top: 60px;
+    clip-path: inset(0 0 0 22.2%);
+    animation-name: hero-desktop-animation;
+    animation-iteration-count: 10;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+  }
+
+  .hero-box-desktop {
+    display: block;
+    position: absolute;
+    left: -93px;
+    top: 210px;
+    z-index: 2;
+    animation-name: hero-box-desktop-animation;
+    animation-iteration-count: 10;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+  }
+
+  @include for-large-phone-up {
+    .hero-desktop {
+      left: -136px;
+      clip-path: inset(0 0 0 31.55%);
+    }
+
+    .hero-box-desktop {
+      left: -93px;
+    }
+  }
+}
