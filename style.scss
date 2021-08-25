@@ -95,20 +95,40 @@ summary {
   @include divider;
 }
 
+// details {
+//   outline: dashed 1px $light-grayish-blue-divider;
+// }
+
+details:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+summary:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 details[open] {
   summary {
     border-bottom: none;
     font-weight: bold;
   }
 
-  summary:after {
+  summary::after {
     transform: rotate(180deg);
   }
 
   @include divider(16px);
 }
 
-summary:after {
+summary::after {
   content: url($summary-arrow);
   display: inline-flex;
   width: 10px;
@@ -117,6 +137,10 @@ summary:after {
 
 summary::marker {
   content: '';
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }
 
 // Keyframe animations
