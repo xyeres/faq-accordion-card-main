@@ -14,9 +14,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -35,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution Code: This repo, check out the code!
-- Live Site URL: [Cooming soon...](https://your-live-site-url.com)
+- Live Site URL: [View project live](https://xyeres.github.io/faq-accordion-card-main/)
 
 ## My process
 
@@ -55,11 +52,11 @@ One thing I was really happy with was the HTML5 implementation of `<details>` an
 Here's an example:
 ```html
 <details>
-        <summary>How many team members can I invite?</summary>
-        <p>
-          You can invite up to 2 additional users on the Free plan. There is no limit on
-          team members for the Premium plan.
-        </p>
+  <summary>How many team members can I invite?</summary>
+  <p>
+    You can invite up to 2 additional users on the Free plan. There is no limit on
+    team members for the Premium plan.
+  </p>
 </details>
 ```
 I thought this was a nifty way to modify my animtion without having to repeat code
@@ -88,7 +85,7 @@ Mixins with params are awesome.
 ```
 No JavaScript was used for this project, I'm happy about that because HTML5 is awesome :)
 ```js
-null
+JavaScript? null
 ```
 
 ### Continued development
