@@ -63,16 +63,17 @@ $bg-pattern-desktop: 'images/bg-pattern-desktop.svg';
 
 html {
   font-size: 16px;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 // Tags
 body {
   margin: 2rem;
   margin-bottom: 6rem;
-  // padding: 2em;
-  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-  background-repeat: no-repeat;
-  height: 100vh;
   color: $very-dark-desaturated-blue;
   font-family: $font-family;
   font-weight: 400;
@@ -134,7 +135,7 @@ details[open] {
 
 summary::after {
   content: url($summary-arrow);
-  display: inline-flex;
+  display: inline;
   width: 10px;
   height: 10px;
 }

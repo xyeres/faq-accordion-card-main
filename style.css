@@ -12,15 +12,14 @@
 
 html {
   font-size: 16px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7)) no-repeat center center fixed;
+  background: linear-gradient(#af67e9, #6565e7) no-repeat center center fixed;
+  background-size: cover;
 }
 
 body {
   margin: 2rem;
   margin-bottom: 6rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
-  background-image: linear-gradient(#af67e9, #6565e7);
-  background-repeat: no-repeat;
-  height: 100vh;
   color: #1d1e35;
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 400;
@@ -91,9 +90,7 @@ details[open] summary::after {
 
 summary::after {
   content: url("images/icon-arrow-down.svg");
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: inline;
   width: 10px;
   height: 10px;
 }
