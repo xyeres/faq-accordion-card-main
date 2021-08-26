@@ -94,20 +94,6 @@ p {
   margin: 0;
 }
 
-a,
-a:visited {
-  outline: none;
-}
-
-a:hover,
-a:active,
-a:focus {
-  outline: none !important;
-  outline-width: 0 !important;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-}
 
 .faq-title {
   display: flex;
@@ -119,6 +105,7 @@ a:focus {
 
 summary {
   list-style: none;
+  cursor: pointer;
 }
 
 
@@ -126,8 +113,8 @@ summary {
   display: inline-block;
   content: url($summary-arrow);
   width: 10px;
-  // padding-left: 5px;
   height: 10px;
+  transition: ease .3s;
 }
 
 summary::marker {
@@ -139,13 +126,15 @@ summary::-webkit-details-marker {
 }
 
 summary:focus {
-  outline: none !important;
-  outline-width: 0 !important;
+  outline: none;
+  outline-width: 0;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   text-decoration: $underline-wavy-red;
 }
+
+
 
 details[open] {
   .faq-title {
@@ -324,4 +313,16 @@ details[open] {
       left: -93px;
     }
   }
+}
+
+Psuedos:focus-visible {
+  outline: none;
+  outline-width: 0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+:focus:not(:focus-visible) {
+  outline: transparent;
 }

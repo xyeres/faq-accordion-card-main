@@ -40,21 +40,6 @@ p {
   margin: 0;
 }
 
-a,
-a:visited {
-  outline: none;
-}
-
-a:hover,
-a:active,
-a:focus {
-  outline: none !important;
-  outline-width: 0 !important;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-}
-
 .faq-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,6 +57,7 @@ a:focus {
 
 summary {
   list-style: none;
+  cursor: pointer;
 }
 
 .faq-title::after {
@@ -79,6 +65,8 @@ summary {
   content: url("images/icon-arrow-down.svg");
   width: 10px;
   height: 10px;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
 }
 
 summary::marker {
@@ -90,8 +78,8 @@ summary::-webkit-details-marker {
 }
 
 summary:focus {
-  outline: none !important;
-  outline-width: 0 !important;
+  outline: none;
+  outline-width: 0;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -349,5 +337,17 @@ details[open] .faq-title::after {
   .hero-box-desktop {
     left: -93px;
   }
+}
+
+Psuedos:focus-visible {
+  outline: none;
+  outline-width: 0;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+:focus:not(:focus-visible) {
+  outline: transparent;
 }
 /*# sourceMappingURL=style.css.map */
