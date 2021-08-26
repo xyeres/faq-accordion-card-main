@@ -11,6 +11,7 @@ $very-dark-grayish-blue: hsl(237, 12%, 33%);
 $dark-grayish-blue: hsl(240, 6%, 50%);
 $light-grayish-blue-divider: hsl(240, 5%, 91%);
 $soft-red: hsl(14, 88%, 65%);
+$underline-wavy-red: underline wavy $soft-red 1px;
 
 // Font Fams
 $font-family: 'Kumbh Sans',
@@ -73,6 +74,11 @@ html {
 // Tags
 body {
   margin: 2rem;
+
+  @include for-phone-only() {
+    margin: 1rem;
+  }
+
   margin-bottom: 6rem;
   color: $very-dark-desaturated-blue;
   font-family: $font-family;
@@ -86,14 +92,6 @@ img {
 
 p {
   margin: 0;
-}
-
-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 51px;
-  @include divider;
 }
 
 a,
@@ -111,41 +109,55 @@ a:focus {
   -webkit-box-shadow: none;
 }
 
+.faq-title {
+  display: flex;
+  align-items: center;
+  min-height: 51px;
+  justify-content: space-between;
+  @include divider;
+}
+
+summary {
+  list-style: none;
+}
+
+
+.faq-title::after {
+  display: inline-block;
+  content: url($summary-arrow);
+  width: 10px;
+  // padding-left: 5px;
+  height: 10px;
+}
+
+summary::marker {
+  display: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 summary:focus {
   outline: none !important;
   outline-width: 0 !important;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-  font-weight: bold;
+  text-decoration: $underline-wavy-red;
 }
 
 details[open] {
-  summary {
+  .faq-title {
     border-bottom: none;
     font-weight: bold;
   }
 
-  summary::after {
+  .faq-title::after {
     transform: rotate(180deg);
   }
 
   @include divider(16px);
-}
-
-summary::after {
-  content: url($summary-arrow);
-  display: inline;
-  width: 10px;
-  height: 10px;
-}
-
-summary::marker {
-  content: '';
-}
-
-summary::-webkit-details-marker {
-  display: none;
 }
 
 // Keyframe animations
@@ -205,7 +217,6 @@ summary::-webkit-details-marker {
   max-width: 327px;
   box-shadow: 0px 22px 30px 10px rgba(0, 0, 0, 0.15);
 }
-
 
 // Hero classes
 .hero-desktop {

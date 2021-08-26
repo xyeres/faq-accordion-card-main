@@ -26,27 +26,18 @@ body {
   font-size: 0.75rem;
 }
 
+@media (max-width: 599px) {
+  body {
+    margin: 1rem;
+  }
+}
+
 img {
   max-width: 100%;
 }
 
 p {
   margin: 0;
-}
-
-summary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 51px;
-  padding-bottom: 0px;
-  border-bottom: solid 1px #e7e7e9;
 }
 
 a,
@@ -64,13 +55,48 @@ a:focus {
   -webkit-box-shadow: none;
 }
 
+.faq-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 51px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 0px;
+  border-bottom: solid 1px #e7e7e9;
+}
+
+summary {
+  list-style: none;
+}
+
+.faq-title::after {
+  display: inline-block;
+  content: url("images/icon-arrow-down.svg");
+  width: 10px;
+  height: 10px;
+}
+
+summary::marker {
+  display: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
 summary:focus {
   outline: none !important;
   outline-width: 0 !important;
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-  font-weight: bold;
+  -webkit-text-decoration: underline wavy #f47c57 1px;
+          text-decoration: underline wavy #f47c57 1px;
 }
 
 details[open] {
@@ -78,29 +104,14 @@ details[open] {
   border-bottom: solid 1px #e7e7e9;
 }
 
-details[open] summary {
+details[open] .faq-title {
   border-bottom: none;
   font-weight: bold;
 }
 
-details[open] summary::after {
+details[open] .faq-title::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-}
-
-summary::after {
-  content: url("images/icon-arrow-down.svg");
-  display: inline;
-  width: 10px;
-  height: 10px;
-}
-
-summary::marker {
-  content: '';
-}
-
-summary::-webkit-details-marker {
-  display: none;
 }
 
 @-webkit-keyframes hero-mobile-animation {
