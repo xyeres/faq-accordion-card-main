@@ -71,7 +71,7 @@ summary:focus {
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
-  border: solid 2px #e7e7e9;
+  font-weight: bold;
 }
 
 details[open] {
