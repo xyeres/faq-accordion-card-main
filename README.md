@@ -93,7 +93,7 @@ JavaScript? null
 
 ### Continued development
 
-I will continue to dive in SCSS after this project. I solidified a lot of my understanding around mobile-first layouts and incorporated some pixel-perfect responsive design. I'm excited to continue this in future projects.
+I will continue to dive into SCSS after this project. I solidified a lot of my understanding around mobile-first layouts and incorporated some pixel-perfect responsive design and I'm excited to continue this in future projects.
 
 ### Useful resources
 I found a ton of good articles while working on this project. Here are a few you may want to check out if you want to learn more about SVGs, HTML5 'acordians' and more cool stuff used in this project.
