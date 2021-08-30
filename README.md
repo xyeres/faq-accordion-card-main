@@ -51,7 +51,7 @@ At one point I had the design looking great across desktop and various mobile de
 I took a mobile first approach in laying out this design. I wanted to also incorporate SCSS as I haven't had a chance to use it much in prior projects.
 I also wanted to play around with SVG filters and animations so I went ahead and added some movement to the page.
 
-One thing I was really happy with was the HTML5 implementation of `<details>` and `<summary>`, using these tags I was able to get the acordian opening and closing *without any javascript*
+One thing I was really happy with was the HTML5 implementation of `<details>` and `<summary>`, using these tags I was able to get the accordions opening and closing *without any javascript*
 Here's an example:
 ```html
 <details>
@@ -96,8 +96,8 @@ JavaScript? null
 I will continue to dive into SCSS after this project. I solidified a lot of my understanding around mobile-first layouts and incorporated some pixel-perfect responsive design and I'm excited to continue this in future projects.
 
 ### Useful resources
-I found a ton of good articles while working on this project. Here are a few you may want to check out if you want to learn more about SVGs, HTML5 'acordians' and more cool stuff used in this project.
-- [MDN doc on the HTML5 details 'acordian' tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) - This helped me a ton! This is how you complete this challenge without javascript
+I found a ton of good articles while working on this project. Here are a few you may want to check out if you want to learn more about SVGs, HTML5 'accordions' and more cool stuff used in this project.
+- [MDN doc on the HTML5 details 'aka accordion' tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) - This helped me a ton! This is how you complete this challenge without javascript
 - [Adding shadows to SVGs](https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/#:~:text=Shadows%20with%20CSS%20filters%20The%20trick%20to%20applying,with%202px%20of%20blur%2C%20and%20is%2040%25%20black.) - Taught me a lot about adding shadows and filters to SVGs
 - [Clipping and masking in CSS](https://getflywheel.com/layout/css-svg-clipping-and-masking-techniques/) - This was helpful to get that look where the box is coming off the page. 
 - [Clippy clip-path maker](https://bennettfeely.com/clippy/) - Super helpful for quickly making clipping masks on the fly.
