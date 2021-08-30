@@ -62,8 +62,8 @@ Here's an example:
   </p>
 </details>
 ```
-I thought this was a nifty way to modify my animtion without having to repeat code
-Mixins with params are awesome.
+I thought this was a nifty way to modify my animtion without having to repeat code.
+Btw, mixins with params are awesome right? :)
 ```css
 @mixin shadow($throw: 32px) {
   filter: drop-shadow(0px $throw rgba(240, 240, 252, .8))
