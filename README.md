@@ -35,7 +35,9 @@ Users should be able to:
 - Live Site URL: [View project live](https://xyeres.github.io/faq-accordion-card-main/)
 
 ## My process
-I approach projects like this with an critical eye for detail because it's the small things that matter. At one point I had the design looking great across desktop and various mobile devices, except Safari on iOS was giving me a terrible bug that has to do with applying `flexbox` to a `<section>` tag. It just didn't look quite right so I spent a number of hours debugging and testing until I had figured out the issue. I think I uncovered a Safari rendering bug in the process! I was able to fix the issue and get the design looking perfect on iOS.
+I approach projects like this with an critical eye for detail because it's the small things that affect the user most. I don't want any of my UI's to feel janky or unreliable so I spend a lot of time honing the look and feel. 
+
+At one point I had the design looking great across desktop and various mobile devices, except Safari on iOS was giving me a terrible bug that has to do with applying `flexbox` to a `<section>` tag. It just didn't look quite right so I spent a number of hours debugging and testing until I had figured out the issue. I think I uncovered a Safari rendering bug in the process! I was able to fix the issue and get the design looking perfect on iOS.
 
 ### Built with
 
