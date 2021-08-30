@@ -1,0 +1,27 @@
+// Mixins
+@mixin divider($padding: 0px) {
+  padding-bottom: $padding;
+  border-bottom: solid 1px $light-grayish-blue-divider;
+}
+
+@mixin shadow($throw: 32px) {
+  filter: drop-shadow(0px $throw rgba(240, 240, 252, .8))
+}
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-large-phone-up {
+  @media (max-width: 795px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 720px) {
+    @content;
+  }
+}

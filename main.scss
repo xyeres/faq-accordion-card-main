@@ -1,0 +1,23 @@
+/**
+* CSS written by Michael Carr
+* https: //github.com/xyeres
+***/
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+@import 'sass/abstracts/mixins';
+@import 'sass/base/reset';
+@import 'sass/abstracts/colors';
+@import 'sass/abstracts/fonts';
+@import 'sass/abstracts/typography';
+@import 'sass/abstracts/images';
+@import 'sass/base/base';
+@import 'sass/layout/container';
+@import 'sass/layout/row';
+@import 'sass/base/animations';
+@import 'sass/components/hero';
+@import 'sass/components/faq';
+@import 'sass/components/summary';
+@import 'sass/components/details';
+@import 'sass/base/pseudos';

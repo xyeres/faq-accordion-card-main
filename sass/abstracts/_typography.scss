@@ -1,0 +1,11 @@
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: $very-dark-grayish-blue;
+
+  @include for-tablet-portrait-up {
+    & {
+      text-align: left;
+    }
+  }
+}

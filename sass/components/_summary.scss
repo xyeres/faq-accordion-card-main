@@ -1,0 +1,27 @@
+summary {
+  list-style: none;
+  cursor: pointer;
+
+  &::marker {
+    display: none;
+  }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+    outline-width: 0;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    text-decoration: $underline-wavy-red;
+  }
+
+  @include for-tablet-portrait-up {
+    &:hover {
+      color: $soft-red;
+    }
+  }
+}

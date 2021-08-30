@@ -1,0 +1,23 @@
+html {
+  font-size: 16px;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// Tags
+body {
+  margin: 2rem;
+
+  @include for-phone-only() {
+    margin: 1rem;
+  }
+
+  margin-bottom: 6rem;
+  color: $very-dark-desaturated-blue;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: $body-copy-font-size;
+}

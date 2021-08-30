@@ -1,0 +1,25 @@
+.faq {
+  &__title {
+    display: flex;
+    align-items: center;
+    min-height: 51px;
+    justify-content: space-between;
+    @include divider;
+
+    &::after {
+      display: inline-block;
+      content: url($summary-arrow);
+      width: 10px;
+      height: 10px;
+      transition: ease .3s;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    & {
+      align-self: flex-start;
+      width: 50%;
+      padding-right: 6.25rem;
+    }
+  }
+}

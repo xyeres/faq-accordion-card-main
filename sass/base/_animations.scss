@@ -1,0 +1,45 @@
+// Keyframe animations
+@keyframes hero-mobile-animation {
+  from {
+    @include shadow;
+    transform: translateY(0px);
+  }
+
+  50% {
+    @include shadow(12px);
+    transform: translateY(10px);
+  }
+
+  to {
+    @include shadow;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hero-desktop-animation {
+  from {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes hero-box-desktop-animation {
+  from {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(9px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}

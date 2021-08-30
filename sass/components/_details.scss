@@ -1,0 +1,12 @@
+details[open] {
+  .faq-title {
+    border-bottom: none;
+    font-weight: bold;
+  }
+
+  .faq-title::after {
+    transform: rotate(180deg);
+  }
+
+  @include divider(16px);
+}
